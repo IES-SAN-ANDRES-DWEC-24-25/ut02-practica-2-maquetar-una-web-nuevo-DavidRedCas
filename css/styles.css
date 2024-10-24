@@ -10,7 +10,13 @@ margen y padding: 0px.
 Texto centrado.
 Fuentes:'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
  */
-    
+
+body{
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}  
 
 /* HEADER
 Estilos de la cabecera:
@@ -19,12 +25,25 @@ Color de fondo blanco
 Tendrá un borde inferior de 1px color #ccc
  */
 
+header{
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    border-bottom: 1px solid #ccc;
+}
 
 /*La clase center definirá un ancho del 85% y el margen se definirá para que se centre automáticamente*/
 
+.center{
+    width: 85%;
+    margin: auto;
+}
 
 /*La clase clearfix se utiliza para limpiar los elementos flotados */
 
+.clearfix{
+    overflow: hidden;
+}
 
 /* Cumplimenta y añade las propiedades css que necesites para el logo 
   El logo ocupa un 30% del ancho de la cabecera*/
@@ -36,7 +55,7 @@ Tendrá un borde inferior de 1px color #ccc
 /* Cumplimenta y añade las propiedades css que necesites para la imagen del logo */ 
 #logo img {
     height: 60px;
-    margin: 
+    margin: 0px 15px;
 }
 
 #ejemplo {
@@ -46,7 +65,8 @@ Tendrá un borde inferior de 1px color #ccc
 /* MENU:  El menú ocupa un 70% del ancho de la cabecera*/
 
 #menu{
-     font-size: 18px;
+    font-size: 18px;
+    width: 70%;
 }
 
 #menu ul{
@@ -59,12 +79,25 @@ el alto será de 45px
 los márgenes derecho e izquierdo de 15px
  */
 
+li{
+    list-style-type: none;
+    height: 45px;
+    margin: 0px 15px;
+    display: inline;
+}
  
 /*Los enlaces del menú de navegación no se mostrarán subrayados y el color será #444 */
 
+#menu a {
+    text-decoration: none;
+    color: #444;
+}
 
 /*Cuando se pase el ratón por los enlaces del menú de navegación el color cambiará a #3cb2d3 */
 
+#menu a:hover{
+    color: #3cb2d3;
+}
 /* SLIDER. Propiedades:
 color blanco
 Ancho 100%
@@ -73,14 +106,27 @@ El color del fondo será: rgba(73,155,234,1)
 Sombra del texto: sombra horizontal y vertical 0px, blur: 5px, color de la sombra: #444
 */
 
+#slider{
+    color: white;
+    width: 100%;
+    height: 150px;
+    background-color: rgba(73, 155, 234, 1);
+    text-shadow: 0px 0px 5px #444;
+}
 /*El texto del slider:
 Margen superior:0px, Espacio entre el contenido y el borde 0px, excepto el superior que es de 60px.
 Texto centrado
 */
 
+#slider h1{
+    margin-top: 0px;
+    padding: 60px 0px 0px 0px;
+    text-align: center;
+}
 /*Cumplimenta #content */
 #content{
-    width: %;     
+    width: 60%;
+    top: 200px;    
 }
 
 .subheader{
@@ -92,6 +138,7 @@ Texto centrado
 /* Cumplimenta #sidebar. El margen de la izquierda será de 20px */
 #sidebar{
     width: 25%; 
+    margin-left: 20px;
 }
 
 .sidebar-item{
@@ -104,6 +151,13 @@ Margen de 0px
 Espacio entre el contenido y el borde inferior de 10px,
 El borde inferior se mostrará con un tamaño de 3px y color #eee (observa la línea después del título 3) */
 
+.sidebar-item h3{
+    margin: 0px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #eee;
+    justify-content: center;
+}
+
 .sidebar-item .btn{
     margin: auto; 
     margin-top: 10px;
@@ -114,13 +168,16 @@ No tiene bordes
 No aparece subrayado..
 El cursor por defecto de la clase btn será la ?    */
 .btn{
-   display: 
+   display: flexbox;
    background: black; 
    color: white;
    padding: 15px; 
    font-weight: bold;
    font-size: 14px;
    max-width: 120px;
+   border: 0px;
+   text-decoration: none;
+   cursor: help;
 }
 /*
 La clase btn-success:
@@ -136,7 +193,7 @@ Cuando se pasa el ratón por encima, el color de fondo del botón será negro
     background:black;
 }
 /* Escribe el selector necesario para que los input de tipo texto tendrán las siguientes propiedades: */
-{
+input[type=text]{
     width: 100%;
     min-height: 30px;
     border: 1px solid #ccc;
@@ -145,6 +202,9 @@ Cuando se pasa el ratón por encima, el color de fondo del botón será negro
 }
 
 /*Cuando los input de tipo texto tengan el foco, el color de fondo cambiará a: #ee9  */
+input[type=text]:focus{
+    background-color: #ee9;
+}
 
 .article-item{
     /*alinear el texto a la izda */
@@ -152,6 +212,7 @@ Cuando se pasa el ratón por encima, el color de fondo del botón será negro
     border-bottom: 1px solid #eee;
     padding-bottom: 20px;
     padding-top: 20px;
+    text-align: left;
 }
 
 .article-item .image-wrap {
@@ -160,6 +221,7 @@ Cuando se pasa el ratón por encima, el color de fondo del botón será negro
     height: 80px;
     margin-right: 15px;
     border: 1px solid #ccc;
+    overflow: hidden;
 }
 
 .article-item .image-wrap img{
@@ -167,7 +229,7 @@ Cuando se pasa el ratón por encima, el color de fondo del botón será negro
 }
 
 .article-item h2{ /*cumplimenta...*/
-    display: ;
+    display: flexbox;
     width:100%;
     padding: 0px;
     margin: 0px;
@@ -175,18 +237,22 @@ Cuando se pasa el ratón por encima, el color de fondo del botón será negro
 }
 
 .article-item .date{ /*cumplimenta...*/
-    display: ;
+    display: flexbox;
     width: 100%;
     color: rgb(122, 122, 122);
 }
 
 .article-item a{ /*cumplimenta... El enlace no aparecerá subrayado*/
-    display: ;
+    display: flexbox;
     color: #444;
     margin-top: 10px;
+    text-decoration: none;
 }
 /*Cuando se pasé el ratón por encima del enlace de article-item se mostrará subrayado */
 
+.article-item a:hover{
+    text-decoration: underline;
+}
 
 
 #footer{
