@@ -37,6 +37,8 @@ header{
 .center{
     width: 85%;
     margin: auto;
+    display: flex;
+    text-align: center;
 }
 
 /*La clase clearfix se utiliza para limpiar los elementos flotados */
@@ -50,16 +52,18 @@ header{
 #logo {
     font-size: 1.5em;
     margin-top: 20px;
+    display: flex;
 }
 
 /* Cumplimenta y añade las propiedades css que necesites para la imagen del logo */ 
 #logo img {
     height: 60px;
-    margin: 0px 15px;
+    margin-top: -10px;
 }
 
 #ejemplo {
     margin-left: 10px;
+    margin-top: 5px;
 }
 
 /* MENU:  El menú ocupa un 70% del ancho de la cabecera*/
@@ -71,6 +75,8 @@ header{
 
 #menu ul{
     line-height: 45px;
+    display: flex;
+    justify-content: flex-end;
 }
 /*
 Los elementos de la lista del menú: 
@@ -125,7 +131,7 @@ Texto centrado
 }
 /*Cumplimenta #content */
 #content{
-    width: 60%;
+    width: 80%;
     top: 200px;    
 }
 
@@ -133,6 +139,7 @@ Texto centrado
     font-size: 30px;
     border-bottom: 1px solid #eee;
     padding-bottom: 10px;
+    text-align: center;
 }
 
 /* Cumplimenta #sidebar. El margen de la izquierda será de 20px */
@@ -168,7 +175,7 @@ No tiene bordes
 No aparece subrayado..
 El cursor por defecto de la clase btn será la ?    */
 .btn{
-   display: flexbox;
+   display: flex;
    background: black; 
    color: white;
    padding: 15px; 
@@ -229,7 +236,7 @@ input[type=text]:focus{
 }
 
 .article-item h2{ /*cumplimenta...*/
-    display: flexbox;
+    display: flex;
     width:100%;
     padding: 0px;
     margin: 0px;
@@ -237,13 +244,13 @@ input[type=text]:focus{
 }
 
 .article-item .date{ /*cumplimenta...*/
-    display: flexbox;
+    display: flex;
     width: 100%;
     color: rgb(122, 122, 122);
 }
 
 .article-item a{ /*cumplimenta... El enlace no aparecerá subrayado*/
-    display: flexbox;
+    display: flex;
     color: #444;
     margin-top: 10px;
     text-decoration: none;
@@ -256,10 +263,11 @@ input[type=text]:focus{
 
 
 #footer{
+    bottom: 1px;
     background: #f7f7f7;
     width: 100%;
     height: 70px;
-    line-height: 70px;
+    align-content: center;
     margin-top:20px;
     color: #444;
 }
