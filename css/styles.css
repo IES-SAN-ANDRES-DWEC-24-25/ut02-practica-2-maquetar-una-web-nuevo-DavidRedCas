@@ -220,6 +220,8 @@ input[type=text]:focus{
     padding-bottom: 20px;
     padding-top: 20px;
     text-align: left;
+    display: flex;
+    flex-direction: row;
 }
 
 .article-item .image-wrap {
@@ -233,6 +235,11 @@ input[type=text]:focus{
 
 .article-item .image-wrap img{
     width: 100%;
+}
+
+.articulos{
+    display: flex;
+    flex-direction: column;
 }
 
 .article-item h2{ /*cumplimenta...*/
